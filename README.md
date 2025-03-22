@@ -40,18 +40,18 @@ Model Training & Testing
 
  Training YOLOv8
 
-  from ultralytics import YOLO
+  ```from ultralytics import YOLO
 model = YOLO("yolov8n.pt")
-model.train(data="dataset.yaml", epochs=50, imgsz=640)
+model.train(data="dataset.yaml", epochs=50, imgsz=640)```
 
 
 Object Detection on Test Images
-results = model.predict(source="/kaggle/input/coco128/coco128/images/train2017/000000000349.jpg", save=True, conf=0.2)
+```results = model.predict(source="/kaggle/input/coco128/coco128/images/train2017/000000000349.jpg", save=True, conf=0.2)```
 
 Displaying Results
-from PIL import Image
+```from PIL import Image
 from IPython.display import display
-display(Image.open("runs/detect/predict/000000000349.jpg"))
+display(Image.open("runs/detect/predict/000000000349.jpg"))```
 
 
 📌 Final Results
